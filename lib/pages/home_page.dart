@@ -55,7 +55,7 @@ class _HomePageState extends State<HomePage> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text("Relógio de 24 h"),
+                  Text("24 hour clock"),
                   Switch(
                     value: isFormatHour,
                     onChanged: (value) {
@@ -70,14 +70,32 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              TextTime(
-                time: hour,
+              Column(
+                children: [
+                  Text("Hour"),
+                  SizedBox(height: 10),
+                  TextTime(
+                    time: hour,
+                  ),
+                ],
               ),
-              TextTime(
-                time: minute,
+              Column(
+                children: [
+                  Text("Minute"),
+                  SizedBox(height: 10),
+                  TextTime(
+                    time: minute,
+                  ),
+                ],
               ),
-              TextTime(
-                time: second,
+              Column(
+                children: [
+                  Text("Second"),
+                  SizedBox(height: 10),
+                  TextTime(
+                    time: second,
+                  ),
+                ],
               ),
             ],
           ),
